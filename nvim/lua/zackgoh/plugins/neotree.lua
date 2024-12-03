@@ -1,18 +1,17 @@
 return {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-tree/nvim-web-devicons",
-        "MunifTanjim/nui.nvim",
-    },
-    config = function()
-      require("neo-tree").setup({
-        close_if_last_window = false,
-        popup_border_style = "rounded"
-      })
+	"nvim-neo-tree/neo-tree.nvim",
+	branch = "v3.x",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"nvim-tree/nvim-web-devicons",
+		"MunifTanjim/nui.nvim",
+	},
+	config = function()
+		require("neo-tree").setup({
+			close_if_last_window = false,
+			popup_border_style = "rounded",
+		})
 
-      vim.keymap.set('n', '<C-b>', ':Neotree filesystem reveal float<CR>', { noremap = true, silent = true })
-    end,
+		vim.keymap.set("n", "<C-e>", ":Neotree filesystem reveal float<CR>", { noremap = true, silent = true })
+	end,
 }
-

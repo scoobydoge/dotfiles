@@ -6,20 +6,23 @@ return{
       "windwp/nvim-ts-autotag"
     },
 
-    config = function () 
+    config = function ()
       local configs = require("nvim-treesitter.configs")
 
       configs.setup({
-          ensure_installed = { 
-            "c", 
-            "lua", 
-            "vim", 
-            "vimdoc", 
-            "query", 
-            "elixir", 
-            "heex", 
-            "javascript", 
-             "html"
+          ensure_installed = {
+            "c",
+            "cpp",
+            "cmake",
+            "make",
+            "lua",
+            "vim",
+            "vimdoc",
+            "query",
+            "elixir",
+            "heex",
+            "javascript",
+            "html"
           },
           incremental_selection = {
             enable = true,
@@ -28,7 +31,7 @@ return{
               node_incremental = "<Leader>si",
               scope_incremental = "<Leader>sc",
               node_decremental = "<Leader>sd"
-            } 
+            }
           },
           sync_install = false,
           highlight = { enable = true },
